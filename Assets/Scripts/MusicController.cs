@@ -36,7 +36,7 @@ public class MusicController : MonoBehaviour
         }
         else
         {
-            this.volumeValue = 0.5f;
+            this.volumeValue = 1f;
             PlayerPrefs.SetFloat(this.saveVolumeValue, this.volumeValue);
             this.menuSound.volume = this.volumeValue;
         }
