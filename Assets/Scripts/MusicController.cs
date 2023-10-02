@@ -25,7 +25,7 @@ public class MusicController : MonoBehaviour
         if (PlayerPrefs.HasKey(this.saveVolumeValue))
         {
             this.volumeValue = PlayerPrefs.GetFloat(this.saveVolumeValue);
-            this.menuSound.volume = this.volumeValue;
+            this.menuSound.volume = 0.5f;
 
             GameObject sliderObj = GameObject.FindWithTag(this.sliderTag);
             if(sliderObj != null )
@@ -36,7 +36,7 @@ public class MusicController : MonoBehaviour
         }
         else
         {
-            this.volumeValue = 1f;
+            this.volumeValue = 0.5f;
             PlayerPrefs.SetFloat(this.saveVolumeValue, this.volumeValue);
             this.menuSound.volume = this.volumeValue;
         }
